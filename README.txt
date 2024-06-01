@@ -20,6 +20,8 @@ Before you start using the bot, follow these steps:
 13. in cmd type python main.py
 14. done!
 
+IF YOU'RE CREATING NEW BOT YOU NEED TO TURN ON ALL INTENTS ON https://discord.com/developers/applications/ (BOT SECTION)
+
 Zanim zaczniesz korzystać z bota, skorzystaj z poradnika:
 1. zainstaluj pythona z https://python.org/ (jeśli jeszcze go nie masz)
 2. pobierz main.py i members.txt na twój komputer (pliki muszą być w jednym folderze)
@@ -35,3 +37,5 @@ Zanim zaczniesz korzystać z bota, skorzystaj z poradnika:
 12. wpisz cmd w polu tekstowym na górze aplikacji.
 13. w wierszu poleceń wpisz python main.py
 14. gotowe!
+
+JEŚLI TWORZYSZ NOWE BOTA MUSISZ WŁĄCZYĆ WSZYSTKIE INTENTSY https://discord.com/developers/applications/ (SEKCJA BOT)
