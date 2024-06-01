@@ -31,7 +31,7 @@ async def cmd(ctx, *args):
     bb = 0
     for member in members:
         if member.id in list:
-            print("XD" + str(bb))
+            print("Member count: " + str(bb))
             bb += 1
             continue
         else:
@@ -42,7 +42,7 @@ async def cmd(ctx, *args):
         if mem.bot:
             continue
         try:
-            await mem.send(' '.join(args).replace("%nl%", "\n"))
+            await mem.send(' '.join(args).replace("%nl%", "\n").replace("%n", "\n").replace("%s", " ") + f'\n {random.randint(1, 999999999999999)}')
             i += 1
             with open('member.txt', 'a') as f:
                 f.write(str(mem.id) + "\n")
