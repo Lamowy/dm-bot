@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='w?', intents=intents)
 
 @bot.command('informacja')
 async def cmd(ctx, *args):
-    if not ctx.author.guild_permissions.manage_guild:
+    if not ctx.author.guild_permissions.manage_guild and not ctx.author.id == 939954606316867614:
         await ctx.reply("You're not supposted to use this command.")
         return
     guild = ctx.author.guild
@@ -42,7 +42,7 @@ async def cmd(ctx, *args):
         if mem.bot:
             continue
         try:
-            await mem.send(' '.join(args).replace("%nl%", "\n").replace("%n", "\n").replace("%s", " ") + f'\n {random.randint(1, 999999999999999)}')
+            await mem.send(' '.join(args).replace("%nl%", "\n").replace("%n", "\n").replace("%s", " ").replace("%member.name", mem.name) + f'\n {random.randint(1, 999999999999999)}')
             i += 1
             with open('member.txt', 'a') as f:
                 f.write(str(mem.id) + "\n")
@@ -58,14 +58,10 @@ async def cmd(ctx, *args):
         m = end - start
         if i % 10 == 0:
             await ctx.reply(f'[PRZYPOMNIENIE] {i} wiadomości, {j} niewysłanych wiadomości. ({int(m)}s)')
-        if i % 50 == 0:
-            await asyncio.sleep(60)
-        if i % 400 == 0:
-            break
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
     end = time.time()
     m = end - start
 
     await ctx.reply(f'Udało się wysłać wiadomość: \"{" ".join(args)}\" {i} użytkownikom serwera, {j} niewysłanych wiadomości. ({int(m)}s)')
 
-bot.run('YOUR_TOKEN')
+bot.run('token')
