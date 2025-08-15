@@ -2,6 +2,8 @@
 # LAMA'S TEAM POLSKA 2021-2024
 # SOURCE CODE IS FREE TO USE
 
+NEW BOT WILL BE SOON! / NOWY BOT ZA NIEDŁUGO!
+
 Read this file before using the bot!
 
 Before you start using the bot, follow these steps:
